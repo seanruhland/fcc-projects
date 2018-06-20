@@ -1,0 +1,113 @@
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>School Survey</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+ <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+ <div>
+  <div class='container'>
+    <div class='span12 centered-text'>
+      <h1 id='title'>Whatcha Eatin!?</h1>
+      <p id='description'>Some info on your favorite food types</p>
+    </div>
+    <div class="row">
+     <div class="col">
+      </div>
+    <div class="col-6">
+      <form id="survey-form">
+        <div class="form-group row">
+          <label for="inputName" id="name-label" class="col-sm-6 col-form-label">Name</label>
+          <div class="col-sm-6">
+            <input  type="text" name="your_name" size="35" value=""class="form-control" id="name" placeholder="Name" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" id="email-label" class="col-sm-6 col-form-label">Email</label>
+            <div class="col-sm-6">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+         </div>
+        </div>
+         <div class="form-group row">
+          <label for="inputAge" id="number-label" class="col-sm-6 col-form-label">Age</label>
+          <div class="col-sm-6">
+            <input type="number" min="21" max='65' name="age" value="" class="form-control" id="number" placeholder="Age" required>
+        </div>
+       </div>
+       <div class='dropdown' id='dropdown'>
+        <select class="dropdown" >
+          <option class="dropdown-item" value="Thai">Thai</option>
+          <option class="dropdown-item" value="Italian">Italian</option>
+          <option  class="dropdown-item" value="Pizza">Pizza</option>
+          <option class="dropdown-item" value="American">American</option>
+          <option class="dropdown-item" value="Vietnamese">Vietnamese</option>
+        </select>
+        </div>
+    <!--   <div >
+        <button type="button"  id='dropdown' class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Favorite Cuisine?
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Thai</a>
+          <a class="dropdown-item" href="#">Italian</a>
+          <a class="dropdown-item" href="#">Pizza</a>
+          <a class="dropdown-item" href="#">American</a>
+          <a class="dropdown-item" href="#">Vietnamese</a>
+        </div>
+      </div> -->
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="fccRadios" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          On a diet
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="fccRadios" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+         Eat as much as I want
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <input class="form-check-input" type="radio" name="fccRadios" value="option3">
+        <label class="form-check-label" for="exampleRadios3">
+         Keto...
+        </label>
+      </div>
+      <div class="form-check form-check-inline ustify-content-center">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">I love Breakfast</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Lunch ALL day</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+        <label class="form-check-label" for="inlineCheckbox3">Dinner like a KING</label>
+      </div>
+       <div class="row">
+        <div class="col-8">
+         <textarea class="form-control form-control-sm"  id='comments'type="textarea" placeholder="What is your favorite restaurant?"></textarea>
+        </div>
+       </div>
+      <div class="col align-self-center">
+       <input type="submit" id="submit" value="Submit" class='justify-content-center'>
+      </div>
+    </form>
+   </div>
+   <div class="col">
+   </div>
+  </div>
+ </div>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+  background:#55B8B7;
+}
+.container {
+  border:1 solid black;
+  background:#c82600;
+
+}
+
+.centered-text {
+    text-align:center
+}

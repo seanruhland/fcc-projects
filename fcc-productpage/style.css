@@ -1,0 +1,45 @@
+#header-img {
+  vertical-align:middle;
+}
+#body-img {
+ height:200px;
+ margin-top:30px;
+ justify-content:center;
+}
+.navbar-brand span {
+  font-size:2rem;
+  line-height:1.2;
+  font-weight: 200;
+  display:inline-block;
+  vertical-align:middle;
+}
+.navbar-brand b {
+  display:block;
+  font-size:50%;
+  line-height:1;
+}
+.navbar-nav {
+  margin-left:auto;
+}
+#babel-fish {
+  margin-bottom:8em;
+}
+.intro-content{
+  margin:8em 0 0 0 ;
+}
+#contact {
+
+
+}
+#spacing {
+  margin-bottom:100px;
+
+}
+
+.container {
+ margin-top:-60px;
+}
+.bg-color{
+ background-color:#E45355;
+
+}
