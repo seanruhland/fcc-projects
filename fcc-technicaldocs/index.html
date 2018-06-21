@@ -3,20 +3,22 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Title</title>
+    <title>Next JS technical literature</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" />
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </head>
 <body>
     <div class="sidenav">
       <nav id='navbar' >
-          <header>Tecnical docs for ____</header>
+          <header>Next.JS</header>
           <ul>
-              <li><a class='nav-link' href="#">Menu Option 1</a></li>
-              <li><a class='nav-link' href="#">Menu Option 2</a></li>
-              <li><a class='nav-link' href="#">Menu Option 2</a></li>
-              <li><a class='nav-link' href="#">Menu Option 2</a></li>
-              <li><a class='nav-link' href="#">Menu Option 2</a></li>
+              <li><a class='nav-link' href="#Introduction">Introduction</a></li>
+              <li><a class='nav-link' href="#Getting_Started">Getting Started</a></li>
+              <li><a class='nav-link' href="#Adding_Content">Adding Content</a></li>
+              <li><a class='nav-link' href="#Trying_out_the_Code">Trying out the Code</a></li>
+              <li><a class='nav-link' href="#Unique_Features">Unique Features</a></li>
           </ul>
       </nav>
     </div>s
@@ -25,64 +27,135 @@
     <main id='main-doc' class='main'>
         <header>
             <hgroup>
-                <h1>Header</h1>
-                <h2>Subheader</h2>
+                <h1>An Introduction to Next.JS</h1>
             </hgroup>
         </header>
         <section>
-            <article>
+            <section class='main-section' id='Introduction'>
                 <header>
-                    <h1>section #1</h1>
+                    <h3>Introduction</h3>
                 </header>
-                <section class='main-section'>
-                    This is the first section.
+                <section >
+                    <p>If you have not heard of Next.JS yet you are definitely missing out. Next.js simplifies the use of React so that your getting your Hello World up and running is a matter of minutes.</p>
+                    <p><span style='font-weight: bold;'>Next.js</span> is a lightweight framework for static and server‑rendered applications.</p>
+                    <strong id='strongquote' style='font-style: oblique; '>Next.js is backed by an organization which is stable and is also very active in the open-source world. Next is not going away in a couple months and most likely is here to stay.</strong>
+                    <p>Think about how webapps are created with PHP. You create some files, write PHP code, then simply deploy it. We don't have to worry about routing much, and the app is rendered on the server by default.</p>
+                    <p>That's exactly what <a href="https://github.com/zeit/next.js">Next.js</a> does. Instead of PHP, the app is built with JavaScript and React. Here are some other cool features Next.js brings to the table:</p>
+                        <ul>
+                            <li>Server-rendered by default</li>
+                            <li>Automatic code splitting for faster page loads</li>
+                            <li>Simple client-side routing (page based)</li>
+                            <li>Webpack-based dev environment which supports Hot Module Replacement (HMR)</li>
+                            <li>Able to implement with Express or any other Node.js HTTP server</li>
+                            <li>Customizable with your own Babel and Webpack configurations</li>
+                        </ul>
+                    <p>You don't have to take MY word for it though, here are some of the companies that have made the switch to Next.JS, you may recognize a few:</p>
+                        <ul id='companylist'>
+                            <li>Netflix</li>
+                            <li>Github</li>
+                            <li>Trulia</li>
+                            <li>Ticketmaster</li>
+                            <li>scale</li>
+                            <li>AuthO</li>
+                            <li>Mozilla VR</li>
+                        </ul>
                 </section>
-            </article>
-            <article>
-                <header>
-                    <h1>section #2</h1>
-                </header>
-                <section class='main-section'>
-                    This is the second section.
-                </section>
-            </article>
-             <article>
-                <header>
-                    <h1>section #3</h1>
-                </header>
-                <section class='main-section'>
-                    This is the second section.
-                </section>
-            </article>
-             <article>
-                <header>
-                    <h1>section #4</h1>
-                </header>
-                <section class='main-section'>
-                    This is the second section.
-                </section>
-            </article>
-             <article>
-                <header>
-                    <h1>section #5</h1>
-                </header>
-                <section class='main-section'>
-                    This is the second section.
-                </section>
-            </article>
-        </section>
-        <aside>
-            <section>
-                <h1>Links</h1>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                </ul>
             </section>
-        </aside>
+            <section id='Getting_Started' class='main-section'>
+                <header>
+                    <h3>Getting Started</h3>
+                </header>
+                <section >
+                  <h5>Setting up our super basic next.js app</h5>
+                  <p>I was not kidding when I said that getting a hello world up and run was ridiculously quick and painless, you can simply follow the upcoming instructions to get your own hello world up and running.</p>
+                  <br>
+                  <p>Let's start with creating a new empty directory and moving into it:</p>
+                  <code class='indent'>$ mkdir next-app\ncd next-app</code>
+                  <p>Next, create the project's package.json in that directory:</p>
+                  <pre>
+                    <code class='pre indent' >
+    {
+      "name": "next-app",
+      "scripts": {
+      "dev": "next",
+      "build": "next build",
+      "start": "next start"
+      }
+    }
+                  </code>
+                  </pre>
+                  <p>The JSON code shown above tells npm to prepare three commands:</p>
+                  <ul class='dashed'>
+                    <li>`npm run dev` – Runs next in the development mode and creates a server for testing the application locally.</li>
+                    <li>`npm run build` – This command will be run by now on the server (you can also enter it in your terminal to try out how the application will look in production) and prepare it to be served to the visitor.</li>
+                    <li>`npm start` – Once next has built the app with npm run build, this command will serve the code to the end user. As long as it runs, your app will be accessible!</li>
+                  </ul>
+                  <p>Now that we've told `next` what to do, we still need to install it. In order to make it work, we also need to install react and react-dom:</p>
+                  <code class='indent'>$ npm install next react react-dom --save</code>
+                  <p>The command shown above installs all three dependencies and adds them to your package.json file, so that you can install them again by just running npm install later.</p>
+                </section>
+            </section>
+             <section id='Adding_Content'class='main-section'>
+                <header>
+                    <h3>Adding Content</h3>
+                </header>
+                <section >
+                  <p>Now that the project's meta files are in place, we can start adding the code that will be rendered when a visitor accesses the site.</p>
+                  <p>With most frameworks, you would now have to set up a router and tell it about the page you'd like to add. But with Next.js, the only thing you need to do is create a page and the framework will automatically handle the rest.</p>
+                  <p>In turn, the next step will be to just add a directory named "pages". As the name indicates, this is where all pages of your application will be located. Based on the directory structure, each file will be mounted to a specific path.</p>
+                  <p>As an example, you can now add a <code>`index.js`</code> file inside that folder, which will be served when the / path is accessed on your app. Into this file, put this code:</p>
+                  <pre>
+                    <code class='pre'>
+    export default () => (
+     &lt;p&gt;Welcome to Next.js!&lt;p&gt;
+    )
+                       </code>
+                  </pre>
+                  <p>As you can see, we're exporting JSX code which renders a paragraph with some random content in it.</p>
+                </section>
+            </section>
+             <section id='Trying_out_the_Code'class='main-section'>
+                <header>
+                    <h3>Trying out the Code</h3>
+                </header>
+                <section >
+                    <p >Next.js comes with a awesome development toolchain built-in. We've defined one of these commands earlier in the <code >`package.json`</code> file we've created: The <code>`dev`</code> script (linked to the <code>`next`</code> command), which can be can run like this:</p>
+                  <code>$ npm run dev</code>
+                  <p>When running the command, <code>`next`</code> will build the code and serve it on the address shown in the terminal. In addition, it will watch for changes on the files inside your project. If you make changes to the code, the app will be built again.</p>
+                  <p>You can now go to <code>http://localhost:3000</code> in your browser and see the rendered markup:</p>
+                  <p>That's all! Now the application is ready to be deployed, you are able to view your Hello World! at <code>http://localhost:3000</code> in less than 5 minutes!</p>
+                </section>
+            </section>
+             <section id='Unique_Features'class='main-section'>
+                <header>
+                    <h3>Unique Features</h3>
+                </header>
+                <section >
+                  <strong>getInitialProps and State</strong>
+                  <p>One thing right out of the gate that next.js provides for you is a special static function you can declare on either class components or functional components: getInitialProps. So, if you were to declare this on a class, for example, you’d do so like this:</p>
+                  <pre>
+                  <code class='pre'>
+    class Foo extends React.Component {
+      static getInitialProps() {
+        return { data: "Some Data" };
+      }
+      render() {
+        return &lt;div&gt;{this.props.data}&lt;/div&gt;;
+      }
+    }
+</code>
+</pre>
+                  <p>Or, if you were to declare it on a functional component, you can do something like this:</p>
+                  <code class='indent'>const Foo = ({ data }) => &lt;div&gt;{data}&lt;/div&gt;;</br>
+                  <code class='indent'>Foo.getInitialProps = () => ({ data: "Some Data" });</code></code>
+               <p></br>What this tells React is that there are some default props that should get populated as part of the initialization of this page. This might be data that needs to get loaded in from some external source; maybe an API server or something to that effect. Maybe there’s some sort of calculation that needs to happen, or…there’s a lot of reasons why you may want to start off with populating some data. This is particularly important with next.js and how it deals with server-side rendering: this tells next.js what sort of data to try to prefetch or populate initially to prepare the app and make it fast. It also allows for some neat tricks with link prefetching!</br></br>
+                One thing I ran into is that some of my endpoints require authentication, and that comes from a token populated via Redux. Trouble is, getInitialProps will be called BEFORE the token is loaded if the page is refreshed, which means it will be sending out unauthenticated requests. This is something you’ll need to consider when deciding whether to use getInitialProps or not to prepopulate data.</br></br>
+                When I ran into this particular issue, I instead opted to go the React-standard route and have data populate via componentDidMount instead. Also, note that getInitialProps can only be used on pages, not on components!</p>
+                </section>
+            </section>
+        </section>
     </main>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+https://medium.com/@diamondgfx/nextjs-lessons-learned-part-2-f1781237cf5c
+https://zeit.co/docs/examples/next
